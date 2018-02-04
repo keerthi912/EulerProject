@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+           function difference() {
+            var limit = 100;
+            var a= 0; 
+            var b = 0; 
+            var c = 0; 
+            var d = 0; 
+        
+            (function sumOfSquares() {     //function for calculating sum of the squares
+                while ( c <= limit ) {
+                    a += Math.pow( c, 2 );
+                    c++;
+                }
+                return a;
+            }());
+            
+        
+            (function squareOfSum() {      // function for calculating square of the sum
+                while ( d <= limit ) {
+                    b =b + d;
+                    d++;
+                }
+                b = Math.pow( b, 2 );
+                
+                return b;
+            }());
+        
+            
+            document.write("The sum of squares of the first 100 numbers:"  + a); 
+        document.write("<br>");
+           document.write("The square of the sum of first 100 numbers:" + b);
+           document.write("<br>");
+              document.write("The difference is:" + (b-a));
+              document.write("<br>");
+           }
+           difference();
+        
+        </script>
+    </body>
+</html>

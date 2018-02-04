@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     The sum of all primes below 2 million are: 
+    </head>
+    <body>
+        <script>
+            function prime() 
+            {
+              var primeValue = 2e+6;
+              var a = primeValue;
+              var sum = 0;
+              while (a >= 2) 
+              {
+                if (isPrime(a) === true)
+              {
+                 sum =sum + a;
+              }
+
+              a--;
+          }
+
+            function isPrime(b)    
+            {
+                var x = Math.floor(Math.sqrt(b));
+                var j = x;
+
+                while (j >= 2) 
+                {
+                    if (b % j === 0) 
+                    {
+                     return false;
+                    }
+                j--;
+                }
+
+            return true;
+            }
+
+  document.write(sum);
+  //prints sum;
+            }   
+prime();
+          
+        
+        </script>
+    </body>
+</html>

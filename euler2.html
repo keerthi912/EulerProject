@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      Value after adding the even numbers of fibonacci Series:
+    </head>
+    <body>
+        <script>
+            function total()
+            {
+                var fibonacci = [ 1, 2 ]
+                var  sum = 0;
+                function calculation(arr) //function for adding up the fibonacci series
+                {
+                     return arr[ arr.length - 1 ] + arr[ arr.length - 2 ]; 
+                }
+                while ( fibonacci[ fibonacci.length - 1 ]<4000000) //while condition to check the length below 4 million
+                {
+                    fibonacci.push( calculation(fibonacci) );  //push() to add the fibonocci series into the array
+                }
+               
+                fibonacci.forEach( function(n)     //adding the fibonacci series
+                {
+                    if ( n % 2 === 0 )
+                    {
+                        sum =sum+n;
+                    }
+                });
+                    return sum; //returns the sum 
+            }   
+           
+            
+            document.write(total());
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head> The largest Prime factor for the number  600851475143 is:</head>
+        <body>
+            <script>
+              var solution = 600851475143; //initialized solution with the given number
+              var i=2; //initialized varible i 
+              while(i< solution )  //condition for incrementing  
+              {
+                  while(solution%i === 0) //checking if the value is the factor of 'solution' variable
+                  {
+                  (function(newSolution){
+                      solution = newSolution;
+                  }) 
+                  (solution/i)
+                  }
+               i++;
+               }
+             document.write(solution);  //printing the largest prime factor
+            </script>
+        </body>
+    
+</html>

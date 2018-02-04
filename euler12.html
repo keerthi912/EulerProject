@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head> value of the first triangle number to have over five hundred divisors:  </head>
+    <body>
+        <script>
+
+            var x = 0;  //x be the value that has 500 divisors
+            var  y = 1;
+            
+            while (factors(x).length <= 500) 
+                        {
+                x = x+ y;
+                  y++;
+            }
+            
+            document.write(x);   //prints the result on the HTML page
+            
+            function factors(n) 
+            {
+              let arr = [], i = 1, max = n;
+            
+              while (i < max) 
+              {
+                if (n % i === 0)
+                 {
+                  arr.push(i); // i is a factor, pass it the array;
+            
+                  let k = n / i; // k is also a factor 
+                  if (i !== k) 
+                  {
+                    arr.push(k); // only push k if it's not the current i
+                  }
+                  max = k;
+                }
+            
+                i++;
+              }  
+            
+              return arr.sort((a, b) => a - b);
+            }
+        </script>
+    </body>
+</html>

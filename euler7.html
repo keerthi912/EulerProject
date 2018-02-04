@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ The 10001st prime number is: 
+</head>
+<body>
+    <script>
+        function prime() {
+    var primeNum = [2];
+    var a = 3;
+    var b = 2;
+    var limit = 10001;
+
+    
+    while ( primeNum.length < limit ) // while primeNum is less than the limit
+    { 
+        
+        while ( a % b !== 0 ) // while a divided by b has a remainder,
+                                  // indicating it could still be a prime
+        {
+            b++;
+            
+            if ( a === b )     // if we're reached the point where a === b,
+                               // then it must be a prime
+             {
+                primeNum.push( a );
+                break;
+            }
+        }
+
+        // otherwise, increment a and reset b;
+        a++;
+        b = 2;
+    }
+    document.write(primeNum[10000])
+        }
+        prime();
+        
+    </script>
+</body>
+</html>

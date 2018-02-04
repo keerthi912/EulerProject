@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            The largest palindrome made from the product of two 3-digit numbers:
+    </head>
+    <body>
+        <script>
+            (function pal() 
+            {
+                                           
+                var n = 999 * 999;    // start with the largest number from two 3-digit numbers
+                var nStr;
+                var nStrReversed;
+                var sqrt;
+                var divisor;
+              
+                while (n > 100000)
+                {                       // check if n is a palindrome
+                  nStr = n + '';        // reverse string
+                  nStrReversed = nStr.split('').reverse().join('');
+                  if (nStr === nStrReversed)   // if they are identical, then n is a palindrome
+                  {
+                   
+                    sqrt = Math.sqrt(n);   // find the sqrt
+                                           // one of the factors has to be less than the sqrt
+                    divisor = Math.floor(sqrt);
+                    while (n % divisor !== 0 && divisor >= 100 && n / divisor <= 999) 
+                    {
+                      divisor--;
+                    }
+                    if (n % divisor === 0 && divisor >= 100 && n / divisor <= 999)
+                     {
+                      
+                      document.write(n);
+                      return n;
+                     } 
+                  } 
+              
+                  n--;
+                }
+            }());
+
+        </script>
+    </body>
+</html>

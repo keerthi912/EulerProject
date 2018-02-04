@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     The number that  is divisible from 1 to 20: 
+    </head>
+    <body>
+        <script>
+          var a = 0;  
+          var limit = 20;  
+          for (i = limit; !a; i = i+ limit) {  //condition for the number below 20
+            for (j = 2; j < limit; j++) {  
+              if (i % j == 0) {  
+                a = 1;  
+              }  
+              else {  
+                a = 0;  
+                break;  
+              }  
+            }  
+            if (a) {  
+              document.write(i); 
+              break;  
+            }  
+          }  
+        </script>
+    </body>
+</html>
